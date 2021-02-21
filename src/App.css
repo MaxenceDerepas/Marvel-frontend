@@ -1,38 +1,414 @@
-.App {
-  text-align: center;
+/* Global Rules */
+body {
+    background-color: #1b1c1e;
+    font-family: "Marvel", sans-serif;
+}
+a {
+    text-decoration: none;
+    color: white;
+}
+.container {
+    margin: 0 20px;
+}
+/* Header */
+header {
+    background-color: #000;
+    height: 85px;
+    display: flex;
+    align-items: center;
+    font-size: 25px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 2;
+}
+header img {
+    height: 45px;
+}
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+header nav {
+    display: flex;
+    align-items: center;
+    width: 580px;
+    justify-content: space-around;
+    height: 100%;
+}
+header nav a {
+    flex: 1;
+    text-align: center;
+    line-height: 85px;
+}
+header nav a:hover {
+    cursor: pointer;
+    background-color: #1b1c1e;
+}
+header button {
+    height: 85px;
+    width: 111.91px;
+    border: none;
+    cursor: pointer;
+    font-family: inherit;
+    font-size: 20px;
+    color: white;
+    font-weight: 400;
+    background-color: #000;
+}
+header button:hover {
+    background-color: #1b1c1e;
+}
+.button-1 {
+    margin-right: 40px;
+}
+.se-deconnecter:hover {
+    background-color: #860707e7;
+}
+/* PERSONNAGE */
+.main {
+    margin-top: 115px;
+
+    margin-bottom: 70px;
+}
+.section-home {
+    color: white;
+    margin: 30px;
+    padding: 25px;
+    box-sizing: border-box;
+    background-color: #860707e7;
+}
+.section-home > div {
+    display: flex;
+}
+.section-home > div > div {
+    margin-left: 30px;
+}
+.section-home h1 {
+    font-size: 40px;
+    font-weight: 700;
+    margin-bottom: 30px;
+}
+.section-home p {
+    font-size: 20px;
+}
+.section-home img {
+    height: 225px;
+    object-fit: cover;
+}
+.card {
+    width: 56%;
+    height: 275px;
+    position: relative;
+    margin: 0 auto;
+    margin-bottom: 30px;
+}
+.add-fav {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    height: 28px;
+    width: 105px;
+    background-color: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+    color: white;
+    font-size: 25px;
+    border-bottom-left-radius: 10px;
+}
+.add-fav:hover {
+    background-color: #1b1c1e;
+    cursor: pointer;
+}
+/* COMICS */
+.section-comics > div:first-child {
+    background-color: #860707e7;
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    color: white;
+    font-size: 40px;
+    font-weight: 700;
+    padding: 15px;
+}
+.title {
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #860707e7;
+    width: 30%;
+    margin: 0 auto;
+    margin-bottom: 30px;
+}
+.title h1 {
+    color: white;
+    font-size: 30px;
+    font-weight: 700;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.section-comics > div:first-child img {
+    margin-bottom: 15px;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.section-comics > div:last-child {
+    margin: 30px;
+    width: 100%;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.liste-comics {
+    margin: 0 auto;
+    margin-bottom: 30px;
+    background: #860707e7;
+    height: 275px;
+    padding: 25px;
+    display: flex;
+    color: white;
+    box-sizing: border-box;
 }
-
-.App-link {
-  color: #61dafb;
+.liste-comics img {
+    height: 225px;
+    object-fit: cover;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.liste-comics > div {
+    margin-left: 30px;
+}
+.liste-comics h1 {
+    font-size: 40px;
+    font-weight: 700;
+    margin-bottom: 30px;
+}
+.liste-comics p {
+    font-size: 20px;
+}
+.comics {
+    margin-top: 115px;
+}
+.comics > div:nth-child(2) {
+    background-color: #860707e7;
+    height: 50px;
+    width: 30%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 30px;
+}
+.comics > div:nth-child(2) h1 {
+    color: white;
+    font-size: 30px;
+    font-weight: 700;
+}
+.comics > div:last-child > div {
+    margin: 0 auto;
+    margin-bottom: 30px;
+    background: #860707e7;
+    height: 275px;
+    width: 75%;
+    padding: 25px;
+    display: flex;
+    color: white;
+    box-sizing: border-box;
+}
+.liste-comics > div:last-child {
+    margin-right: 30px;
+}
+.description {
+    overflow: hidden;
+    overflow-y: scroll;
+    height: 155px;
+}
+.range-bar {
+    width: 20%;
+    margin-left: 120px;
+    top: 130px;
+    position: absolute;
+}
+.search {
+    width: 20%;
+    right: 120px;
+    top: 130px;
+    position: absolute;
+    height: 30px;
+    font-size: 25px;
+    color: rgb(68, 64, 64);
+    font-family: inherit;
+    border: none;
+    border-radius: 5px;
+    font-weight: 700;
+}
+/* LOGIN */
+.login {
+    height: 500px;
+    width: 30%;
+    background-color: #860707e7;
+    margin: 115px auto;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.login h1 {
+    color: white;
+    font-size: 30px;
+    font-weight: 700;
+    margin-bottom: 30px;
+}
+.login form > div {
+    margin-bottom: 30px;
+}
+.login form p {
+    margin-left: 5px;
+    margin-bottom: 20px;
+    font-weight: 400;
+    font-size: 20px;
+    color: white;
+}
+.login input {
+    height: 24px;
+    width: 200px;
+    border-radius: 6px;
+    border: black solid 3px;
+    box-sizing: border-box;
+}
+.login button {
+    margin: 0 auto;
+    width: 200px;
+    border-radius: 6px;
+    height: 24px;
+    color: white;
+    background-color: #1b1c1e;
+}
+/* SIGNUP */
+.signup {
+    height: 500px;
+    width: 30%;
+    background-color: #860707e7;
+    margin: 115px auto;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.signup h1 {
+    color: white;
+    font-size: 30px;
+    font-weight: 700;
+    margin-bottom: 30px;
+}
+.signup form > div {
+    margin-bottom: 30px;
+}
+.signup form p {
+    margin-left: 5px;
+    margin-bottom: 20px;
+    font-weight: 400;
+    font-size: 20px;
+    color: white;
+}
+.signup input {
+    height: 24px;
+    width: 200px;
+    border-radius: 6px;
+    border: black solid 3px;
+    box-sizing: border-box;
+}
+.signup button {
+    margin: 0 auto;
+    width: 200px;
+    border-radius: 6px;
+    height: 24px;
+    color: white;
+    background-color: #1b1c1e;
+}
+/* FOOTER */
+footer {
+    height: 55px;
+    background-color: #000;
+    z-index: 2;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    color: white;
+    font-size: 35px;
+}
+footer p {
+    cursor: pointer;
+}
+/* FAVORIS */
+.favoris {
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.favoris h1 {
+    font-size: 40px;
+    background-color: #860707e7;
+    padding: 20px;
+    margin-bottom: 30px;
+}
+.favoris > div {
+    display: flex;
+    width: 55%;
+    justify-content: space-between;
+}
+.favoris h2 {
+    font-size: 35px;
+    background-color: #860707e7;
+    padding: 20px;
+    margin-bottom: 25px;
+}
+.col-characters {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.col-comics {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.fav-char {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #860707e7;
+    padding: 10px;
+    width: 150px;
+}
+.fav-char1 {
+    position: relative;
+    margin-bottom: 25px;
+}
+.add-fav1 {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    height: 28px;
+    width: 105px;
+    background-color: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+    color: white;
+    font-size: 25px;
+    border-bottom-left-radius: 10px;
+}
+.add-fav1:hover {
+    background-color: #1b1c1e;
+    cursor: pointer;
+}
+.fav-charp {
+    font-size: 30px;
+    margin-top: 10px;
 }
