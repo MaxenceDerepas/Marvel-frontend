@@ -19,12 +19,12 @@ const Personnage = ({ userToken, userId }) => {
         const fetchData = async () => {
             try {
                 const response = await axios.get(
-                    `https://app-marvels.herokuapp.com//character?limit=${rangeBar}&skip=${pagination}&name=${search}`
+                    `https://app-marvels.herokuapp.com/character?limit=${rangeBar}&skip=${pagination}&name=${search}`
                 );
                 setData(response.data);
                 if (userId) {
                     const responseFavoris = await axios.get(
-                        `https://app-marvels.herokuapp.com//user/characters?id=${userId}`
+                        `https://app-marvels.herokuapp.com/user/characters?id=${userId}`
                     );
                     setDataFavoris(responseFavoris.data);
                 }
@@ -82,7 +82,7 @@ const Personnage = ({ userToken, userId }) => {
                     idCharacters
                 ) => {
                     const response = await axios.post(
-                        "https://app-marvels.herokuapp.com//addFavoriteCharacters",
+                        "https://app-marvels.herokuapp.com/addFavoriteCharacters",
                         {
                             img: image,
                             name: name,

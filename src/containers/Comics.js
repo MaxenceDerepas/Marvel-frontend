@@ -16,12 +16,12 @@ const Comics = ({ userToken, userId }) => {
     useEffect(() => {
         const fetchData = async () => {
             const response = await axios.get(
-                `https://app-marvels.herokuapp.com//comics?limit=${rangeBar}&skip=${pagination}&title=${search}`
+                `https://app-marvels.herokuapp.com/comics?limit=${rangeBar}&skip=${pagination}&title=${search}`
             );
             setData(response.data);
             if (userId) {
                 const responseFavoris = await axios.get(
-                    `https://app-marvels.herokuapp.com//user/comics?id=${userId}`
+                    `https://app-marvels.herokuapp.com/user/comics?id=${userId}`
                 );
                 setDataFavoris(responseFavoris.data);
             }
@@ -77,7 +77,7 @@ const Comics = ({ userToken, userId }) => {
                     idComics
                 ) => {
                     const response = await axios.post(
-                        "https://app-marvels.herokuapp.com//addFavoriteComics",
+                        "https://app-marvels.herokuapp.com/addFavoriteComics",
                         {
                             img: image,
                             title: name,

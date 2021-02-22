@@ -12,7 +12,7 @@ const Signup = ({ setUserToken, setUserId }) => {
         event.preventDefault();
         try {
             const response = await axios.post(
-                "https://app-marvels.herokuapp.com//user/signup",
+                "https://app-marvels.herokuapp.com/user/signup",
                 {
                     email: email,
                     username: username,

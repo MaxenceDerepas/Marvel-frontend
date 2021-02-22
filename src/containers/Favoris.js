@@ -10,7 +10,7 @@ const Favoris = ({ userId, userToken }) => {
         const fetchData = async () => {
             try {
                 const response = await axios.get(
-                    `https://app-marvels.herokuapp.com//favorite?id=${userId}`
+                    `https://app-marvels.herokuapp.com/favorite?id=${userId}`
                 );
                 console.log(response.data);
                 setData(response.data);
@@ -34,7 +34,7 @@ const Favoris = ({ userId, userToken }) => {
                         console.log(elem.id);
                         const functionAdd = async (id, idCharacters) => {
                             const response = await axios.post(
-                                "https://app-marvels.herokuapp.com//addFavoriteCharacters",
+                                "https://app-marvels.herokuapp.com/addFavoriteCharacters",
                                 {
                                     _id: id,
                                     id: idCharacters,
@@ -68,7 +68,7 @@ const Favoris = ({ userId, userToken }) => {
                         console.log(elem.id);
                         const functionAdd = async (id, idCharacters) => {
                             const response = await axios.post(
-                                "https://app-marvels.herokuapp.com//addFavoriteComics",
+                                "https://app-marvels.herokuapp.com/addFavoriteComics",
                                 {
                                     _id: id,
                                     id: idCharacters,

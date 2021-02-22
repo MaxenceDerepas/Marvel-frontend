@@ -12,7 +12,7 @@ const Login = ({ setUserToken, setUserId }) => {
 
         try {
             const response = await axios.post(
-                "https://app-marvels.herokuapp.com//user/login",
+                "https://app-marvels.herokuapp.com/user/login",
                 {
                     email: email,
                     password: password,
