@@ -63,9 +63,11 @@ const Comics = ({ userToken, userId }) => {
                 placeholder="Recherche des comics"
             />
             {data.results.map((elem) => {
-                for (let i = 0; i < dataFavoris.length; i++) {
-                    if (elem._id === dataFavoris[i].id) {
-                        elem.value = true;
+                if (userToken) {
+                    for (let i = 0; i < dataFavoris.length; i++) {
+                        if (elem._id === dataFavoris[i].id) {
+                            elem.value = true;
+                        }
                     }
                 }
 

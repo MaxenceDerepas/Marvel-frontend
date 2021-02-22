@@ -13,7 +13,7 @@ const PersoViewComics = ({ userToken, userId }) => {
         const fetchData = async () => {
             try {
                 const response = await axios.get(
-                    `https://app-marvels.herokuapp.com//comics/${id}`
+                    `https://app-marvels.herokuapp.com/comics/${id}`
                 );
                 setData(response.data);
                 setIsLoading(false);
@@ -42,7 +42,7 @@ const PersoViewComics = ({ userToken, userId }) => {
                         idComics
                     ) => {
                         const response = await axios.post(
-                            "https://app-marvels.herokuapp.com//addFavoriteComics",
+                            "https://app-marvels.herokuapp.com/addFavoriteComics",
                             {
                                 img: image,
                                 title: name,

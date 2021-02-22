@@ -68,9 +68,11 @@ const Personnage = ({ userToken, userId }) => {
                 placeholder="Recherche des personnages"
             />
             {data.results.map((elem, index) => {
-                for (let i = 0; i < dataFavoris.length; i++) {
-                    if (elem._id === dataFavoris[i].id) {
-                        elem.value = true;
+                if (userToken) {
+                    for (let i = 0; i < dataFavoris.length; i++) {
+                        if (elem._id === dataFavoris[i].id) {
+                            elem.value = true;
+                        }
                     }
                 }
 
