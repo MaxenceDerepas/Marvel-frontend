@@ -1,8 +1,7 @@
 import axios from "axios";
 import { useState } from "react";
-import Cookies from "js-cookie";
 
-const Login = ({ setUserToken, setUserId }) => {
+const Login = ({ setUser, setUserid }) => {
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
     const [message, setMessage] = useState();
@@ -18,9 +17,9 @@ const Login = ({ setUserToken, setUserId }) => {
                     password: password,
                 }
             );
-            setUserToken(Cookies.set("userToken", response.data.token));
+            setUser(response.data.token);
             setMessage(response.data.message);
-            setUserId(Cookies.set("userId", response.data._id));
+            setUserid(response.data._id);
             console.log(response.data);
         } catch (error) {
             console.log(error.message);

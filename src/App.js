@@ -15,6 +15,27 @@ function App() {
         Cookies.get("userToken") || null
     );
     const [userId, setUserId] = useState(Cookies.get("userId") || null);
+
+    const setUser = (token) => {
+        if (token) {
+            Cookies.set("userToken", token, { expires: 1 });
+            setUserToken(token);
+            console.log(userToken);
+        } else {
+            Cookies.remove("userToken");
+            setUserToken(null);
+        }
+    };
+    const setUserid = (id) => {
+        if (id) {
+            Cookies.set("userId", id, { expires: 1 });
+            setUserId(id);
+            console.log(userId);
+        } else {
+            Cookies.remove("userId");
+            setUserToken(null);
+        }
+    };
     return (
         <div className="App">
             <Router>
@@ -25,16 +46,10 @@ function App() {
                 />
                 <Switch>
                     <Route path="/signup">
-                        <Signup
-                            setUserToken={setUserToken}
-                            setUserId={setUserId}
-                        />
+                        <Signup setUser={setUser} setUserid={setUserid} />
                     </Route>
                     <Route path="/login">
-                        <Login
-                            setUserToken={setUserToken}
-                            setUserId={setUserId}
-                        />
+                        <Login setUser={setUser} setUserid={setUserid} />
                     </Route>
                     <Route path="/favoris">
                         <Favoris userId={userId} userToken={userToken} />

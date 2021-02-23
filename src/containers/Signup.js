@@ -1,8 +1,7 @@
 import { useState } from "react";
 import axios from "axios";
-import Cookies from "js-cookie";
 
-const Signup = ({ setUserToken, setUserId }) => {
+const Signup = ({ setUser, setUserid }) => {
     const [username, setUsername] = useState("");
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
@@ -20,8 +19,8 @@ const Signup = ({ setUserToken, setUserId }) => {
                 }
             );
             setMessage(response.data.message);
-            setUserToken(Cookies.set("userToken", response.data.token));
-            setUserId(Cookies.set("userId", response.data._id));
+            setUser(response.data.token);
+            setUserid(response.data._id);
         } catch (error) {
             console.log(error.message);
         }
